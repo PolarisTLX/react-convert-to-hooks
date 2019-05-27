@@ -75,8 +75,9 @@ const CharPicker = props => {
   */
 
 
-  // alternate, remove useEffect, and u>se separated content into custom hook file:
-  // const [isLoading, fetchedData] = useHttp('https://swapi.co/api/people', []);  //a hook can't be nested inside another function
+  // alternate, remove useEffect, and u>se separated content into custom hook file (not complete to keep basics here intact):
+  // Benefit: allows logic to be shared between components
+  // const [isLoading, fetchedData] = useHttp('https://swapi.co/api/people', []);  //a hook can't be nested inside another function of if statement. Hooks must be at the top level of your function.
 
   // render() {
     let content = <p>Loading characters...</p>;
