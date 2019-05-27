@@ -17,6 +17,12 @@ const App = props => {
     side: 'light',
     destroyed: false
   });
+  // for fun/experimentation, seperating this out below:
+
+  // would have to replace [currentstate, functiontochangestate] names everywhere below if we use this:
+  // const [selectedCharacter, setSelectedCharacter] = useState(1);
+  // const [chosenSide, setChosenSide] = useState('light');
+  // const [destroyed, setDestroyed] = useState(false)
 
   // sideHandler = side => {
   const sideHandler = side => {
