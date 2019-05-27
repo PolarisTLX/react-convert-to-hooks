@@ -150,4 +150,9 @@ const Character = props => {
   // }
 }
 
-export default Character;
+// to deal with shouldComponentUpdate():
+// export default Character;
+export default React.memo(Character);
+/* React.memo() automatically knows what variables to watch for to know if updating is needed
+  There is an optiona 2nd argument (a function) you can add to React.memo() to further control if you want or don't want to re-render. Not the case here so not used.
+*/

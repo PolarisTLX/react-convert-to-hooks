@@ -2,6 +2,9 @@
 // import React, { Component } from 'react';
 import React, { useState, useEffect } from 'react';
 
+// if you want to use custom hooks (to break up your code / make it more modular?)
+import { useHttp } from '../customHooks/customHook';
+
 import './CharPicker.css';
 
 // class CharPicker extends Component {
@@ -70,6 +73,10 @@ const CharPicker = props => {
     What goes into the array [], are the variables that, if they are changed, you want to trigger this function to run again. The variables are called dependencies in this case.
     If it is left as just an empty array [], this only fires ONCE, and so it is EXACTLY like the older 'componentDidMount()'.
   */
+
+
+  // alternate, remove useEffect, and u>se separated content into custom hook file:
+  // const [isLoading, fetchedData] = useHttp('https://swapi.co/api/people', []);  //a hook can't be nested inside another function
 
   // render() {
     let content = <p>Loading characters...</p>;
